@@ -1,4 +1,4 @@
-Following command can be used to run docker compose. 
+Following command can be used to build and run docker containers. 
 ```bash
 docker-compose up
 ```
@@ -7,12 +7,12 @@ A postgresql container will be created and once it is available, a seperate cont
 
 It will scrape website, process data into a Pandas DataFrame and then will ingest into 'events' database.
 
-To access the database, use following details.
+To interact with database server, use following details.
 ### Postgresql:
 ```
 user = 'root'
 password = 'root'
-host = 'pgdatabase'
+host = 'pgdatabase' or 'localhost' if accessing from outside of container.
 port = 5432
 db = 'events'
 
