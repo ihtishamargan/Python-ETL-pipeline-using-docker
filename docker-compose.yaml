@@ -1,0 +1,16 @@
+services:
+  scraper:
+    build: .
+    depends_on:
+      - pgdatabase
+      
+  pgdatabase:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=events
+    volumes:
+      - ./data:/var/lib/postgresql/data:rw
+    ports:
+      - "5432:5432"  
