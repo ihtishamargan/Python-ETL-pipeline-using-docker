@@ -1,7 +1,6 @@
 FROM python:3.9
 
-RUN pip install pandas sqlalchemy psycopg2 requests beautifulsoup4
-
+RUN pip install pandas sqlalchemy psycopg2 requests beautifulsoup4 os python-dotenv
 WORKDIR /app
 
 COPY ingest_data.py ingest_data.py
